@@ -3,8 +3,7 @@
 int main()
 {
     int min,max;
-    scanf("%d",&min);
-    scanf("%d",&max);
+    scanf("%d,%d",&min,&max);
     printf("The Armstrong numbers are: ");
     for (int i = min; i < max; i++)
     {
