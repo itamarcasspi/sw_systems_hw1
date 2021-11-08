@@ -1,7 +1,7 @@
 CC=gcc
 DEPS = NumClass.h
 
-all: mains maindloop maindec loops recursives recursived loopd
+all: mains maindloop maindrec loops recursives recursived loopd
 
 #static libraries:
 loops: advancedClassificationLoop.o basicClassification.o
@@ -26,16 +26,16 @@ maindrec: main.o recursived
 	$(CC) -o maindrec main.o ./libclassrec.so -lm
 #.o files
 main.o: main.c NumClass.h
-	$(CC) -c main.c 
+	$(CC) -c -Wall main.c 
 		
 advancedClassificationRecursion.o: advancedClassificationRecursion.c NumClass.h
-	$(CC) -c advancedClassificationRecursion.c 
+	$(CC) -c -Wall advancedClassificationRecursion.c 
 
 basicClassification.o: basicClassification.c NumClass.h
-	$(CC) -c  basicClassification.c 
+	$(CC) -c -Wall basicClassification.c 
 
 advancedClassificationLoop.o: advancedClassificationLoop.c NumClass.h
-	$(CC) -c  advancedClassificationLoop.c 
+	$(CC) -c -Wall advancedClassificationLoop.c 
 
 
 .PHONY: clean

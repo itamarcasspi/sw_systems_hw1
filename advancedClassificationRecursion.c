@@ -32,7 +32,6 @@ int isPalindromeR(int num,int numLength)
 
 int isPalindrome(int num)
 {
-    int num_length = floor(log10(abs(num)));
     return isPalindromeR(num,floor(log10(abs(num))));
 }
  
