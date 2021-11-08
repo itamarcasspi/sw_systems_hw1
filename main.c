@@ -23,12 +23,12 @@ int main()
         }
     }
      printf("\n");
-    printf("The Prime numbers are: ");
+    printf("The Prime numbers are:");
     for (int i = min; i < max; i++)
     {
         if(isPrime(i))
         {
-            printf("%d ",i);
+            printf(" %d",i);
         }
     }
      printf("\n");
@@ -37,7 +37,7 @@ int main()
     {
         if(isStrong(i))
         {
-            printf("%d ",i);
+            printf(" %d",i);
         }
     }   
     printf("\n");
