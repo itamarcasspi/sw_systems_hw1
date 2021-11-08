@@ -7,26 +7,25 @@ all: mains maindloop maindrec loops recursives recursived loopd
 
 #static libraries:
 loops: libclassloops.a
-	ar -rcs libclassloops.a $(OBJ_LOOP)
 
 libclassloops.a: $(OBJ_LOOP)
-	ar -rcs libclassloops.a $(OBJ_LOOP)
+	ar rcs libclassloops.a $(OBJ_LOOP)
 
 recursives: libclassrec.a
-	ar -rcs libclassrec.a $(OBJ_REC)
+	
 
 libclassrec.a: $(OBJ_REC)
-	ar -rcs libclassrec.a $(OBJ_REC)
+	ar rcs libclassrec.a $(OBJ_REC)
 
 #dyamic libraries:
 recursived: libclassrec.so
-	$(CC) -shared -o libclassrec.so $(OBJ_REC)
+	
 
 libclassrec.so: $(OBJ_REC)
 	$(CC) -shared -o libclassrec.so $(OBJ_REC)
 
 loopd: libclassloops.so
-	$(CC) -shared -o libclassloops.so $(OBJ_LOOP)
+	
 
 libclassloops.so: $(OBJ_LOOP)
 	$(CC) -shared -o libclassloops.so $(OBJ_LOOP)
